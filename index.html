@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Mimpiku di Bidang Teknologi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            background: linear-gradient(to right, #0a0c0e, #00f2fe);
+            color: #333;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.4);
+            color: white;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .story h2 {
+            text-align: center;
+            color: #4facfe;
+            margin-bottom: 20px;
+        }
+
+        .story p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>BIODATA</h2>
+        <a href="index.html" class="active">🏠 Beranda</a>
+        <a href="kata.html">📜 Kata-Kata</a>
+        <a href="biodata.html">👤 Biodata</a>
+        <a href="kontak.html">📞 Kontak</a>
+         <a href="foto.html"> 📸 Foto</a>
+    </div>
+
+    <div class="content fade-in">
+        <div class="container">
+            <div class="story">
+                <h2>Kehidupan Tentang Ingin Bergabung di Bidang Teknologi</h2>
+                <p>
+                    Sejak kecil, aku selalu tertarik dengan segala hal yang berhubungan dengan <span class="highlight">teknologi</span>. Melihat komputer, ponsel, dan internet membuatku penasaran: bagaimana semua ini bisa bekerja? Pertanyaan itu menjadi benih yang menumbuhkan mimpiku.
+                </p>
+                <p>
+                    Waktu <span class="highlight">SMA</span>, aku mulai belajar dasar-dasar komputer, memperbaiki laptop rusak, dan mencoba membuat website sederhana. Meskipun fasilitas di sekolah terbatas, aku memanfaatkan waktu di warnet untuk mencari pengetahuan baru.
+                </p>
+                <p>
+                    Ketika masuk <span class="highlight">kuliah di jurusan Ilmu Komputer</span>, aku semakin yakin bahwa masa depan ada di bidang teknologi. Aku ingin terlibat dalam pengembangan perangkat lunak, kecerdasan buatan, atau bahkan membangun startup teknologi yang bermanfaat bagi banyak orang.
+                </p>
+                <p>
+                    Bagiku, bergabung di dunia teknologi bukan hanya soal karier, tapi juga kontribusi. Aku ingin menggunakan kemampuan ini untuk membantu masyarakat, menciptakan solusi untuk masalah sehari-hari, dan membuka peluang baru bagi generasi berikutnya.
+                </p>
+                <p>
+                    Mimpi ini masih panjang perjalanannya, tapi aku percaya setiap langkah kecil—setiap baris kode yang kutulis, setiap ide yang kutuangkan—akan membawaku lebih dekat pada tujuan. Dunia teknologi terus berkembang, dan aku ingin tumbuh bersamanya.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

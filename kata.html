@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata-Kata</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Styling khusus kata-kata */
+        blockquote {
+            background: #fff3e0;
+            border-left: 6px solid #ff9800;
+            margin: 20px auto;
+            padding: 15px 20px;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #444;
+            border-radius: 10px;
+            max-width: 700px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            background: linear-gradient(to right, #0a0c0e, #00f2fe);
+            color: #333;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.4);
+            color: white;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #4facfe;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        .profile-card h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #4facfe;
+        }
+
+        .profile-card p {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .profile-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+        }
+
+        .profile-card ul li strong {
+            color: #333;
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>BIODATA</h2>
+        <a href="index.html">🏠 Beranda</a>
+        <a href="kata.html" class="active">📜 Kata-Kata</a>
+        <a href="biodata.html">👤 Biodata</a>
+        <a href="kontak.html">📞 Kontak</a>
+        <a href="foto.html"> 📸 Foto</a>
+    </div>
+
+    <div class="content fade-in">
+        <h1>Kata-Kata Motivasi untuk Programmer & Teknologi</h1>
+
+        <blockquote>"Kesuksesan bukan milik orang pintar, tapi milik orang yang mau berusaha."</blockquote>
+        <blockquote>"Hidup ini seperti bersepeda, agar seimbang kita harus terus bergerak."</blockquote>
+
+        <!-- Tambahan kata-kata sesuai jurusan -->
+        <blockquote>"Setiap baris kode yang kamu tulis adalah langkah kecil menuju perubahan besar di dunia."</blockquote>
+        <blockquote>"Error bukan tanda kegagalan, tapi tanda bahwa kamu sedang belajar menjadi lebih baik."</blockquote>
+        <blockquote>"Teknologi hanyalah alat, kreativitasmu adalah kekuatan yang menghidupkannya."</blockquote>
+        <blockquote>"Seorang programmer sejati tidak hanya menulis kode, tapi juga menulis masa depan."</blockquote>
+        <blockquote>"Bug terbesar bukan di komputer, tapi di rasa malas kita."</blockquote>
+        <blockquote>"Belajar algoritma itu seperti belajar hidup — ada proses, ada logika, dan selalu ada solusi."</blockquote>
+        <blockquote>"Jangan takut mencoba teknologi baru, karena masa depan selalu milik mereka yang berani bereksperimen."</blockquote>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

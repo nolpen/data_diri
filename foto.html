@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galeri Foto - Container Grid</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+ <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            background: linear-gradient(to right, #0a0c0e, #00f2fe);
+            color: #333;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.4);
+            color: white;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .story h2 {
+            text-align: center;
+            color: #4facfe;
+            margin-bottom: 20px;
+        }
+
+        .story p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ff5722;
+        }
+    </style>
+
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>BIODATA</h2>
+    <a href="index.html">🏠 Beranda</a>
+    <a href="kata.html">📜 Kata-Kata</a>
+    <a href="biodata.html">👤 Biodata</a>
+    <a href="kontak.html">📞 Kontak</a>
+    <a href="foto.html" class="active">📸 Foto</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <header class="site-header">
+      <h1>Galeri Foto</h1>
+      <p class="subtitle">Ini saya punya foto foto diri saya</p>
+    </header>
+
+    <main class="container">
+      <section class="gallery" aria-label="Galeri Foto">
+        <figure class="photo-card" tabindex="0">
+          <img src="assets/images/1.jpeg" alt="Foto Yuli" loading="lazy">
+          <figcaption>
+            <h3>TA</h3>
+            <p>Perjalanan panjang yang tak akan terlupakan.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-card" tabindex="0">
+          <img src="assets/images/yuli1 (2).jpeg" alt="Foto Yuli" loading="lazy">
+          <figcaption>
+            <h3>TA</h3>
+            <p>Lelah terbayar, kenangan abadi.</p>
+          </figcaption>
+        </figure>
+
+         <figure class="photo-card" tabindex="0">
+          <img src="assets/images/yuli1 (3).jpeg" alt="Foto Yuli" loading="lazy">
+          <figcaption>
+            <h3>TA</h3>
+            <p>Titik akhir perjuangan, awal cerita baru.</p>
+          </figcaption>
+        </figure>
+
+         <figure class="photo-card" tabindex="0">
+          <img src="assets/images/yuli1 (4).jpeg" alt="Foto Yuli" loading="lazy">
+          <figcaption>
+            <h3>TA</h3>
+            <p>Dari lelah menjadi bangga.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-card" tabindex="0">
+          <img src="assets/images/yuli1 (5).jpeg" alt="Deskripsi foto 3" loading="lazy">
+          <figcaption>
+            <h3>Praktek</h3>
+            <p>Teori Ketemu kenyataan..</p>
+          </figcaption>
+        </figure>
+
+         <figure class="photo-card" tabindex="0">
+          <img src="assets/images/yuli1 (6).jpg" alt="Deskripsi foto 2" loading="lazy">
+          <figcaption>
+            <h3>foto BEM</h3>
+            <p>Kerja nyata.</p>
+          </figcaption>
+        </figure>
+
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Tutup">&times;</button>
+      <img class="lightbox-img" alt="">
+      <div class="lightbox-caption"></div>
+    </div>
+
+    <footer class="site-footer">
+      <small>© 2025 Galeri Anda</small>
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = lightbox.querySelector('.lightbox-img');
+      const lbCaption = lightbox.querySelector('.lightbox-caption');
+      const closeBtn = lightbox.querySelector('.lightbox-close');
+
+      function openLightbox(imgEl, captionText) {
+        lbImg.src = imgEl.src;
+        lbImg.alt = imgEl.alt || '';
+        lbCaption.textContent = captionText || '';
+        lightbox.setAttribute('aria-hidden', 'false');
+        lightbox.classList.add('open');
+        closeBtn.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lbImg.src = '';
+      }
+
+      document.querySelectorAll('.photo-card img').forEach(img => {
+        img.addEventListener('click', () => {
+          const fig = img.closest('.photo-card');
+          const caption = fig.querySelector('figcaption h3')?.textContent || '';
+          openLightbox(img, caption);
+        });
+
+        img.closest('.photo-card').addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            img.click();
+          }
+        });
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+      });
+    })();
+  </script>
+</body>
+</html>
